@@ -1,0 +1,104 @@
+[
+    {
+        "id": 1,
+        "segment_name": "Single-family homes",
+        "estate_title": "Modern Single-Family Home",
+        "description": "Welcome to your dream home! This modern single-family home offers the perfect blend of style, comfort, and functionality. Featuring a contemporary design with spacious interiors, this home is ideal for families looking for a tranquil retreat in the heart of the city. With three bedrooms, two bathrooms, and a lush garden, there's plenty of space for relaxation and entertainment. Conveniently located in the bustling City Center, this home provides easy access to shopping, dining, and entertainment options. Don't miss the opportunity to make this your forever home!",
+        "price": "$500,000",
+        "status": "sale",
+        "area": "2,500 sq ft",
+        "location": "123 Main St, City Center, Anytown, USA",
+        "facilities": [
+            "3 Bedrooms",
+            "2 Bathrooms",
+            "Garden"
+        ],
+        "image": "https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg",
+        "button_text": "View Property"
+    },
+    {
+        "id": 2,
+        "segment_name": "Townhouses",
+        "estate_title": "Luxury Townhouse",
+        "description": "Experience luxury living at its finest in this exquisite townhouse. Boasting elegant architecture, premium finishes, and luxurious amenities, this townhouse is the epitome of sophistication. With four bedrooms, three bathrooms, and a rooftop terrace overlooking the waterfront, this home offers the perfect combination of style and comfort. Located in the prestigious Waterfront district, this townhouse provides easy access to fine dining, shopping, and entertainment options. Don't miss out on the opportunity to own this prestigious property!",
+        "price": "$700,000",
+        "status": "sale",
+        "area": "3,000 sq ft",
+        "location": "456 Waterfront Blvd, Waterfront, Anytown, USA",
+        "facilities": [
+            "4 Bedrooms",
+            "3 Bathrooms",
+            "Rooftop Terrace"
+        ],
+        "image": "https://images.pexels.com/photos/2972860/pexels-photo-2972860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "button_text": "View Property"
+    },
+    {
+        "id": 3,
+        "segment_name": "Apartments",
+        "estate_title": "Modern Apartment",
+        "description": "Welcome to urban living at its best! This stylish apartment offers panoramic views of the city skyline and luxurious amenities for a contemporary lifestyle. With two bedrooms, two bathrooms, and access to a fitness center, this apartment provides the perfect combination of comfort and convenience. Located in the vibrant Downtown district, this apartment is close to restaurants, shops, and cultural attractions. Whether you're a young professional or a small family, this apartment is sure to impress!",
+        "price": "$2,500/month",
+        "status": "rent",
+        "area": "1,200 sq ft",
+        "location": "789 Downtown Ave, Downtown, Anytown, USA",
+        "facilities": [
+            "2 Bedrooms",
+            "2 Bathrooms",
+            "Fitness Center"
+        ],
+        "image": "https://images.pexels.com/photos/2440471/pexels-photo-2440471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "button_text": "View Property"
+    },
+    {
+        "id": 4,
+        "segment_name": "Vacation rentals",
+        "estate_title": "Cozy Vacation Rental",
+        "description": "Escape to paradise in this charming vacation rental! Located on the picturesque Beachfront, this cozy rental offers stunning ocean views and a relaxing atmosphere. With one bedroom, one bathroom, and access to a private beach, this rental is perfect for a romantic getaway or a solo retreat. Enjoy leisurely strolls along the shore, soak up the sun on the sandy beach, or simply relax on the oceanfront balcony. Book your stay today and experience the ultimate beach vacation!",
+        "price": "$150/night",
+        "status": "rent",
+        "area": "800 sq ft",
+        "location": "123 Beachfront Ave, Beachfront, Anytown, USA",
+        "facilities": [
+            "1 Bedroom",
+            "1 Bathroom",
+            "Ocean View"
+        ],
+        "image": "https://images.pexels.com/photos/2468773/pexels-photo-2468773.jpeg",
+        "button_text": "View Property"
+    },
+    {
+        "id": 5,
+        "segment_name": "Student housing",
+        "estate_title": "Student Dormitory",
+        "description": "Welcome to your home away from home! This student dormitory offers comfortable accommodations in a convenient location near the university campus. With one bedroom, a shared bathroom, and a study area, this dormitory provides everything you need for a successful academic year. Located just steps away from campus, this dormitory is close to classrooms, libraries, and student amenities. Join a vibrant community of students and make lifelong friendships in this welcoming environment!",
+        "price": "$1,000/month",
+        "status": "rent",
+        "area": "500 sq ft",
+        "location": "321 University Blvd, Near University, Anytown, USA",
+        "facilities": [
+            "1 Bedroom",
+            "Shared Bathroom",
+            "Study Area"
+        ],
+        "image": "https://plus.unsplash.com/premium_photo-1691844987972-fd36840179a2?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "button_text": "View Property"
+    },
+    {
+        "id": 6,
+        "segment_name": "Senior living communities",
+        "estate_title": "Retirement Villa",
+        "description": "Welcome to your golden years! This retirement villa offers a peaceful and fulfilling lifestyle in a serene senior living community. With two bedrooms, two bathrooms, and access to a community center, this villa provides the perfect blend of independence and support. Located in a scenic senior community, this villa offers care services, recreational activities, and a sense of belonging. Join a community of like-minded individuals and enjoy the retirement you've always dreamed of!",
+        "price": "$400,000",
+        "status": "sale",
+        "area": "1,500 sq ft",
+        "location": "555 Serenity Ln, Senior Community, Anytown, USA",
+        "facilities": [
+            "2 Bedrooms",
+            "2 Bathrooms",
+            "Community Center"
+        ],
+        "image": "https://images.unsplash.com/photo-1540520372776-d95dc8d21610?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "button_text": "View Property"
+    }
+]

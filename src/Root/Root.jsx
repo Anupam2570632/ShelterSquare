@@ -3,8 +3,12 @@ import NavBar from '../components/NavBar/NavBar';
 const Root = () => {
     return (
         <div>
-            <NavBar/> 
-            <Outlet />
+            <div className='fixed top-0 z-10 w-full'>
+                <NavBar />
+            </div>
+            <div className='mt-24'>
+                <Outlet />
+            </div>
         </div>
     );
 };
