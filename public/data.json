@@ -2,12 +2,12 @@
     {
         "id": 1,
         "segment_name": "Single-family homes",
-        "estate_title": "Modern Single-Family Home",
+        "estate_title": "Modern Family Home",
         "description": "Welcome to your dream home! This modern single-family home offers the perfect blend of style, comfort, and functionality. Featuring a contemporary design with spacious interiors, this home is ideal for families looking for a tranquil retreat in the heart of the city. With three bedrooms, two bathrooms, and a lush garden, there's plenty of space for relaxation and entertainment. Conveniently located in the bustling City Center, this home provides easy access to shopping, dining, and entertainment options. Don't miss the opportunity to make this your forever home!",
         "price": "$500,000",
         "status": "sale",
         "area": "2,500 sq ft",
-        "location": "123 Main St, City Center, Anytown, USA",
+        "location": "123 Main St, Anytown, USA",
         "facilities": [
             "3 Bedrooms",
             "2 Bathrooms",
@@ -24,7 +24,7 @@
         "price": "$700,000",
         "status": "sale",
         "area": "3,000 sq ft",
-        "location": "456 Waterfront Blvd, Waterfront, Anytown, USA",
+        "location": "456 Waterfront Blvd, Anytown, USA",
         "facilities": [
             "4 Bedrooms",
             "3 Bathrooms",
@@ -41,7 +41,7 @@
         "price": "$2,500/month",
         "status": "rent",
         "area": "1,200 sq ft",
-        "location": "789 Downtown Ave, Downtown, Anytown, USA",
+        "location": "789 Downtown Ave, Downtown, USA",
         "facilities": [
             "2 Bedrooms",
             "2 Bathrooms",
@@ -58,7 +58,7 @@
         "price": "$150/night",
         "status": "rent",
         "area": "800 sq ft",
-        "location": "123 Beachfront Ave, Beachfront, Anytown, USA",
+        "location": "123 Beachfront Ave, Beachfront, USA",
         "facilities": [
             "1 Bedroom",
             "1 Bathroom",
@@ -75,7 +75,7 @@
         "price": "$1,000/month",
         "status": "rent",
         "area": "500 sq ft",
-        "location": "321 University Blvd, Near University, Anytown, USA",
+        "location": "321 University Blvd, Near University, USA",
         "facilities": [
             "1 Bedroom",
             "Shared Bathroom",
@@ -92,7 +92,7 @@
         "price": "$400,000",
         "status": "sale",
         "area": "1,500 sq ft",
-        "location": "555 Serenity Ln, Senior Community, Anytown, USA",
+        "location": "555 Serenity Ln, Senior Community, USA",
         "facilities": [
             "2 Bedrooms",
             "2 Bathrooms",

@@ -1,3 +1,4 @@
+import { FaArrowRight } from "react-icons/fa";
 
 const BannerMessage = () => {
     return (
@@ -8,9 +9,11 @@ const BannerMessage = () => {
             <p className="text-gray-200 mt-4 opacity-70 font-semibold">
                 Find your dream home with ShelterSquare. Whether city apartment, suburban house, or waterfront townhouse, we have the widest selection for every budget. Explore today - your ideal living space is just a click away!
             </p>
-            <button className="btn font-bold btn-accent btn-outline">
+            
+            <a href="#estate" className="btn font-bold btn-accent btn-outline">
                 See Now
-            </button>
+                <FaArrowRight />
+            </a>
         </div>
     );
 };
