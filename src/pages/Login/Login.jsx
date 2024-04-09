@@ -1,8 +1,6 @@
-import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 import {
-    Card,
     CardHeader,
     CardBody,
     CardFooter,
@@ -11,6 +9,7 @@ import {
     Checkbox,
     Button,
 } from "@material-tailwind/react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
@@ -27,9 +26,15 @@ const Login = () => {
             })
     }
 
+    const handleSignIn = e => {
+        e.preventDefault()
+        console.log('log i b')
+
+    }
+
     return (
-        <div className="h-[90vh] bg-base-200 w-screen flex items-center justify-center">
-            <Card className="w-96 mx-auto">
+        <div className="h-[640px] bg-base-200 w-screen flex items-center justify-center">
+            <form onSubmit={handleSignIn} className="w-96 mx-auto">
                 <CardHeader
                     variant="gradient"
                     color="gray"
@@ -40,14 +45,14 @@ const Login = () => {
                     </Typography>
                 </CardHeader>
                 <CardBody className="flex flex-col gap-4">
-                    <Input name="email" label="Email" type="text" size="lg" />
-                    <Input name="password" label="Password" type="password" size="lg" />
+                    <Input name="email" required label="Email" type="email" size="lg" />
+                    <Input name="password" required label="Password" type="password" size="lg" />
                     <div className="-ml-2.5">
                         <Checkbox label="Remember Me" />
                     </div>
                 </CardBody>
                 <CardFooter className="pt-0">
-                    <Button variant="gradient" fullWidth>
+                    <Button type="submit" variant="gradient" fullWidth>
                         Log In
                     </Button>
                     <Typography variant="small" className="mt-6 flex justify-center">
@@ -63,7 +68,7 @@ const Login = () => {
                         </Link>
                     </Typography>
                 </CardFooter>
-            </Card>
+            </form>
         </div>
     );
 };
