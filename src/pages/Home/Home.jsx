@@ -12,6 +12,7 @@ const Home = () => {
                 <p className="font-medium text-center max-w-[800px] mx-auto text-black opacity-30">
                     Explore a diverse range of homes, from city apartments to waterfront villas. Each offers unique amenities for comfort and luxury. Start your search today and make your dream home a reality.
                 </p>
+                <hr className="w-11/12 md:w-9/12 mx-auto" />
                 <Estate />
             </div>
         </div>

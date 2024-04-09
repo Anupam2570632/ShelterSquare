@@ -3,8 +3,14 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const NavBar = () => {
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
     console.log(user)
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
     const links = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
@@ -14,7 +20,7 @@ const NavBar = () => {
 
 
     return (
-        <div className="navbar max-w-[1600px] mx-auto flex items-center bg-base-100 py-4 w-11/12 md:w-[85%] mx-auto">
+        <div className="navbar max-w-[1600px] mx-auto flex items-center bg-base-100 py-4 w-11/12 md:w-[85%]">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
@@ -59,13 +65,13 @@ const NavBar = () => {
                                     </div>
                                 </div>
                             </div>
-                            <button>
+                            <button onClick={handleLogOut} className="btn btn-secondary">
                                 Log Out
                             </button>
                         </div>
                         :
                         <Link to={'/login'}>
-                            <button data-tip="hello" className="btn hover:tooltip hover:tooltip-bottom">Login</button>
+                            <button className="btn btn-secondary">Login</button>
                         </Link>
                 }
             </div>

@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 
@@ -29,7 +29,11 @@ const AuthProvider = ({ children }) => {
             .then(data => setEstate(data))
     }, [])
 
-    const AuthInfo = { GoogleSignIn, user, estate }
+    const logOut = () => {
+        return signOut(auth)
+    }
+
+    const AuthInfo = { GoogleSignIn, user, estate, logOut }
 
 
     return (

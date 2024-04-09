@@ -16,7 +16,7 @@ const Estate = () => {
                         </div>
                         <img className="rounded-[12px] p-6 h-[250px] w-full object-cover object-center" src={aState.image} alt="" />
                     </div>
-                    <div className="p-6 space-y-4 h-full border flex flex-col border-t-0 rounded-b-xl border-blue-600">
+                    <div className="p-6 space-y-4 h-full border flex flex-col border-t-0 rounded-b-xl border-gray-300">
                         <div className="flex items-center justify-between">
                             <h2 className="text-xl font-bold text-[#131313]">{aState.estate_title}</h2>
                             <h2 className="text-black"><span className="text-[18px] font-semibold">For : </span> <span className="opacity-65">{aState.status}</span></h2>
