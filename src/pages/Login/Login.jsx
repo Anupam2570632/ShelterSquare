@@ -10,6 +10,7 @@ import {
     Button,
 } from "@material-tailwind/react";
 import { useContext, useState } from "react";
+import { Helmet } from "react-helmet";
 import { FaFacebook, FaGithub, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -62,6 +63,9 @@ const Login = () => {
 
     return (
         <div className="h-[640px] bg-base-200 w-screen flex items-center justify-center">
+            <Helmet>
+                <title>ShelterSquare | Login</title>
+            </Helmet>
             <form onSubmit={handleSignIn} className="w-96 mx-auto">
                 <CardHeader
                     variant="gradient"

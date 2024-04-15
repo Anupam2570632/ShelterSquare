@@ -1,3 +1,4 @@
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -38,13 +39,22 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <div className="text-center">
+                <h2 className="text-xl font-bold mb-4">Follow Us</h2>
+                <div className="flex gap-6 text-[#CCCC] justify-center">
+                    <FaFacebook className="text-3xl hover:cursor-pointer"></FaFacebook>
+                    <FaLinkedin className="text-3xl hover:cursor-pointer"></FaLinkedin>
+                    <FaInstagram className="text-3xl hover:cursor-pointer"></FaInstagram>
+                    <FaTwitter className="text-3xl hover:cursor-pointer"></FaTwitter>
+                </div>
+            </div>
             <div className="border border-b border-dashed max-w-[1300px] mx-auto w-[80%]">
 
             </div>
             <div className="text-center">
-                <p className="flex items-center gap-2 justify-center">@all rights reserved, <Link to={'/'}>
-                    <h2 className="font-bold text-[#fff]">Shelter<span className="text-cyan-500">Square</span></h2>
-                </Link> services limited.2016</p>
+                <p className="">@all rights reserved, <span><Link to={'/'}>
+                    <span className="font-bold text-[#fff]">Shelter<span className="text-cyan-500">Square</span></span>
+                </Link></span> services limited.2016</p>
             </div>
         </div>
     );

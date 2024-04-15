@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet";
 import Banner from "../../components/Banner/Banner";
 import Estate from "../../components/Estate/Estate";
 
 const Home = () => {
     return (
         <div className="w-11/12 md:w-[85%] mx-auto">
+            <Helmet>
+                <title>ShelterSquare | Home</title>
+            </Helmet>
             <Banner />
             <div className="my-10 md:py-20 space-y-4">
                 <h2 className="text-4xl text-center font-black text-[#131313]">

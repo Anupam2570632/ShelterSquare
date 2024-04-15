@@ -12,6 +12,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { FaFacebook, FaGithub } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 
 const Register = () => {
@@ -79,6 +80,9 @@ const Register = () => {
 
     return (
         <div className="p-10 m-0 bg-base-200 flex items-center justify-center">
+            <Helmet>
+                <title>ShelterSquare | Register</title>
+            </Helmet>
             <div className="h-[640px] bg-base-200 w-screen flex items-center justify-center">
                 <form onSubmit={handleRegister} className="w-96 mx-auto">
                     <CardHeader

@@ -10,6 +10,7 @@ import {
     Input,
     Button,
 } from "@material-tailwind/react";
+import { Helmet } from "react-helmet";
 
 const UpdateProfile = () => {
     const navigate = useNavigate()
@@ -35,6 +36,9 @@ const UpdateProfile = () => {
 
     return (
         <div className="p-10 m-0 bg-base-200 flex items-center justify-center">
+            <Helmet>
+                <title>ShelterSquare | Update Profile</title>
+            </Helmet>
             <div className="h-[640px] bg-base-200 w-screen flex items-center justify-center">
                 <form onSubmit={handleUpdateUserInformation} className="w-96 mx-auto">
                     <CardHeader
@@ -43,7 +47,7 @@ const UpdateProfile = () => {
                         className="mb-4 grid h-28 place-items-center"
                     >
                         <Typography variant="h3" color="white">
-                            Register Now!
+                            Update Profile
                         </Typography>
                     </CardHeader>
                     <CardBody className="flex flex-col gap-4">
