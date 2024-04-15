@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { CiLocationOn } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 
 const Estate = () => {
@@ -19,7 +20,7 @@ const Estate = () => {
                     <div className="p-6 space-y-4 h-full border flex flex-col border-t-0 rounded-b-xl border-gray-300">
                         <div className="flex items-center justify-between">
                             <h2 className="text-xl font-bold text-[#131313]">{aState.estate_title}</h2>
-                            <h2 className="text-black"><span className="text-[18px] font-semibold">For : </span> <span className="opacity-65">{aState.status}</span></h2>
+                            <h2 className="text-black underline underline-offset-2"><span className="text-[18px] font-semibold">For : </span> <span className="opacity-65">{aState.status}</span></h2>
                         </div>
                         <h3 className="text-[20px] font-semibold text-cyan-500">{aState.segment_name}</h3>
                         {/* <p>{aState.description}</p> */}
@@ -43,9 +44,11 @@ const Estate = () => {
 
                         <hr />
                         <div className="h-full w-full flex items-end justify-end">
-                            <button className="btn btn-accent w-full">
-                                {aState.button_text}
-                            </button>
+                            <Link className="w-full" to={`/property-details/${aState.id}`}>
+                                <button className="btn btn-accent w-full">
+                                    {aState.button_text}
+                                </button>
+                            </Link>
                         </div>
 
                     </div>

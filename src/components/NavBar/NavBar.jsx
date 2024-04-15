@@ -1,10 +1,18 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const NavBar = () => {
-    const { user, logOut } = useContext(AuthContext)
-    console.log(user)
+    const { user, logOut, reload } = useContext(AuthContext)
+    const [profileImage, setProfileImage] = useState(user?.photoURL)
+    const [profileName, setProfileName] = useState(user?.displayName ? user.displayName : 'name not found')
+
+    useEffect(() => {
+        setProfileImage(user?.photoURL)
+        setProfileName(user?.displayName ? user.displayName : 'name not found')
+        console.log(profileImage, profileName)
+        console.log('i am changed')
+    }, [reload])
 
     const handleLogOut = () => {
         logOut()
@@ -15,7 +23,7 @@ const NavBar = () => {
     const links = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/update-profile'}>Update Profile</NavLink></li>
-        <li><NavLink to={'/contact'}>Contact Us</NavLink></li>
+        <li><NavLink to={'/contact-us'}>Contact Us</NavLink></li>
     </>
 
 
@@ -34,9 +42,9 @@ const NavBar = () => {
                                 <div className="">
                                     <hr />
                                     <div className="flex items-center justify-center gap-2 pr-4">
-                                        <img className="w-10 rounded-full" src={user.photoURL} alt="" />
+                                        <img className="w-10 rounded-full" src={profileImage} alt="" />
                                         <div>
-                                            <h2 className="font-bold text-[#131313]">{user.displayName}</h2>
+                                            <h2 className="font-bold text-[#131313]">{profileName}</h2>
                                             <p>{user.email}</p>
                                         </div>
                                     </div>
