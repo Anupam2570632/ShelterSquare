@@ -20,10 +20,10 @@ const Estate = () => {
                     <div className="p-6 space-y-4 h-full border flex flex-col border-t-0 rounded-b-xl border-gray-300">
                         <div className="flex items-center justify-between">
                             <h2 className="text-xl font-bold text-[#131313]">{aState.estate_title}</h2>
-                            <h2 className="text-black underline underline-offset-2"><span className="text-[18px] font-semibold">For : </span> <span className="opacity-65">{aState.status}</span></h2>
+                            <h2 className="text-black rounded-xl px-1 border-2 border-purple-400"><span className="text-[18px] font-semibold">For : </span> <span className="opacity-65">{aState.status}</span></h2>
                         </div>
                         <h3 className="text-[20px] font-semibold text-cyan-500">{aState.segment_name}</h3>
-                        {/* <p>{aState.description}</p> */}
+                        
                         <hr />
                         <div className="flex items-center justify-between">
                             <h2 className="text-black"><span className="text-[18px] font-semibold">Price : </span> <span className="opacity-65">{aState.price}</span></h2>
@@ -34,7 +34,7 @@ const Estate = () => {
                             <div className="flex flex-wrap">
                                 {
                                     aState.facilities.map((facility, idx) => <div className="" key={idx}>
-                                        <h1 className="border border-gray-500 font-medium px-3 py-2">{facility}</h1>
+                                        <h1 className="border bg-purple-300 border-black font-medium px-3 py-2">{facility}</h1>
                                     </div>)
                                 }
                             </div>
@@ -45,7 +45,7 @@ const Estate = () => {
                         <hr />
                         <div className="h-full w-full flex items-end justify-end">
                             <Link className="w-full" to={`/property-details/${aState.id}`}>
-                                <button className="btn btn-accent w-full">
+                                <button className="btn btn-accent font-bold w-full">
                                     {aState.button_text}
                                 </button>
                             </Link>

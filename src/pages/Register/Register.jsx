@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { FaFacebook, FaGithub } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
 
 
 const Register = () => {
@@ -20,6 +21,7 @@ const Register = () => {
 
     const { createAccount, FacebookSignIn, GoogleSignIn, GithubSignIn, updateUserInformation, setReload } = useContext(AuthContext)
     console.log(setReload)
+    const [passwordError, setPAsswordError] = useState(null)
 
     const handleRegister = e => {
         e.preventDefault()
@@ -28,24 +30,26 @@ const Register = () => {
         const password = e.target.password.value
         const photoURL = e.target.photoURL.value
 
+        const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
+        if (!passwordRegex.test(password)) {
+            setPAsswordError('password must contain at least 6 character and contain an Uppercase and a Lowercase letter')
+            return
+        }
+
         createAccount(email, password)
             .then(result => {
                 console.log(result.user)
+                toast.success('Account created successfully')
                 updateUserInformation(name, photoURL)
                 setReload(true)
             })
             .catch(error => {
-                console.error(error)
+                console.error(error.message)
+                if(error.message == 'Firebase: Error (auth/email-already-in-use).') {
+                    toast.error('email already in use')
+                }
             })
 
-        // updateUserInformation(name, photoURL)
-        //     .then(() => {
-        //         console.log("finished user update")
-        //         setReload(true)
-        //     })
-        //     .catch(error => {
-        //         console.error(error)
-        //     })
     }
 
 
@@ -53,6 +57,7 @@ const Register = () => {
         GoogleSignIn()
             .then(result => {
                 console.log(result.user)
+                toast.success('Log in successfully')
             })
             .catch(error => {
                 console.error(error)
@@ -62,6 +67,7 @@ const Register = () => {
         FacebookSignIn()
             .then(result => {
                 console.log(result.user)
+                toast.success('Log in successfully')
             })
             .catch(error => {
                 console.error(error)
@@ -71,6 +77,7 @@ const Register = () => {
         GithubSignIn()
             .then(result => {
                 console.log(result.user)
+                toast.success('Log in successfully')
             })
             .catch(error => {
                 console.error(error)
@@ -83,7 +90,7 @@ const Register = () => {
             <Helmet>
                 <title>ShelterSquare | Register</title>
             </Helmet>
-            <div className="h-[640px] bg-base-200 w-screen flex items-center justify-center">
+            <div className="h-[750px] bg-base-200 w-screen flex items-center justify-center">
                 <form onSubmit={handleRegister} className="w-96 mx-auto">
                     <CardHeader
                         variant="gradient"
@@ -107,6 +114,11 @@ const Register = () => {
                                     <FaRegEye onClick={() => setShow(true)} className="absolute right-4 text-xl top-[14px]"></FaRegEye>
                             }
                         </div>
+                        {
+                            passwordError && <div>
+                                <p className="text-red-700 text-[14px] font-bold">{passwordError}</p>
+                            </div>
+                        }
                     </CardBody>
                     <CardFooter className="pt-0">
                         <Checkbox

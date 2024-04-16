@@ -13,6 +13,7 @@ import { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import { FaFacebook, FaGithub, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = () => {
     const { GoogleSignIn, GithubSignIn, logIn, FacebookSignIn } = useContext(AuthContext)
@@ -24,6 +25,7 @@ const Login = () => {
         GoogleSignIn()
             .then(result => {
                 console.log(result.user)
+                toast.success('Log in successfully')
             })
             .catch(error => {
                 console.error(error)
@@ -33,6 +35,7 @@ const Login = () => {
         FacebookSignIn()
             .then(result => {
                 console.log(result.user)
+                toast.success('Log in successfully')
             })
             .catch(error => {
                 console.error(error)
@@ -42,6 +45,7 @@ const Login = () => {
         GithubSignIn()
             .then(result => {
                 console.log(result.user)
+                toast.success('Log in successfully')
             })
             .catch(error => {
                 console.error(error)
@@ -55,9 +59,11 @@ const Login = () => {
         logIn(email, password)
             .then(result => {
                 console.log(result.user)
+                toast.success('Log in successfully')
             })
             .catch(error => {
                 console.error(error)
+                toast.error('Invalid email/password')
             })
     }
 

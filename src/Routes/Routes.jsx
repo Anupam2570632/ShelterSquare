@@ -6,6 +6,7 @@ import Register from "../pages/Register/Register";
 import UpdateProfile from "../pages/updateProfile/UpdateProfile";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import ContactUs from "../pages/ContactUs/ContactUs";
+import EstateDetails from "../pages/EstateDeatails/EstateDetails";
 
 const route = createBrowserRouter([
     {
@@ -18,11 +19,11 @@ const route = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: 'login',
+                path: '/login',
                 element: <Login />
             },
             {
-                path: 'register',
+                path: '/register',
                 element: <Register />
             },
             {
@@ -35,7 +36,7 @@ const route = createBrowserRouter([
             },
             {
                 path: '/property-details/:id',
-                element: <PrivateRoute><div>hello</div></PrivateRoute>
+                element: <PrivateRoute><EstateDetails /></PrivateRoute>
             }
         ]
     }
