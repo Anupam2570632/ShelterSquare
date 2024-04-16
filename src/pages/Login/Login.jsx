@@ -12,19 +12,21 @@ import {
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import { FaFacebook, FaGithub, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Login = () => {
     const { GoogleSignIn, GithubSignIn, logIn, FacebookSignIn } = useContext(AuthContext)
 
     const [show, setShow] = useState(false)
-
+    const navigate = useNavigate()
+    const location = useLocation()
 
     const handleGoogleSignIn = () => {
         GoogleSignIn()
             .then(result => {
                 console.log(result.user)
+                navigate(location?.state ? location.state : '/')
                 toast.success('Log in successfully')
             })
             .catch(error => {
@@ -35,6 +37,7 @@ const Login = () => {
         FacebookSignIn()
             .then(result => {
                 console.log(result.user)
+                navigate(location?.state ? location.state : '/')
                 toast.success('Log in successfully')
             })
             .catch(error => {
@@ -45,6 +48,7 @@ const Login = () => {
         GithubSignIn()
             .then(result => {
                 console.log(result.user)
+                navigate(location?.state ? location.state : '/')
                 toast.success('Log in successfully')
             })
             .catch(error => {
@@ -60,6 +64,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user)
                 toast.success('Log in successfully')
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.error(error)

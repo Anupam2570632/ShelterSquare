@@ -12,7 +12,7 @@ const EstateDetails = () => {
     const property = estate.find(item => item.id == id)
     console.log(property)
     return (
-        <div className="w-11/12 mb-10 lg:w-[60%] mx-auto border p-6 space-y-4 border-cyan-700 rounded-[14px]">
+        <div className="w-11/12 mb-10 lg:w-[70%] mx-auto border p-6 space-y-4 border-cyan-700 rounded-[14px]">
             <Helmet>
                 <title>ShelterSquare | Details-[{property.estate_title}]</title>
             </Helmet>

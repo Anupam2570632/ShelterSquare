@@ -7,12 +7,13 @@ import UpdateProfile from "../pages/updateProfile/UpdateProfile";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import ContactUs from "../pages/ContactUs/ContactUs";
 import EstateDetails from "../pages/EstateDeatails/EstateDetails";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const route = createBrowserRouter([
     {
         path: '/',
         element: <Root />,
-        errorElement: <div>404 page not found</div>,
+        errorElement: <ErrorPage/>,
         children: [
             {
                 path: '/',
@@ -28,7 +29,7 @@ const route = createBrowserRouter([
             },
             {
                 path: '/contact-us',
-                element: <ContactUs />
+                element: <PrivateRoute><ContactUs /></PrivateRoute>
             },
             {
                 path: '/update-profile',

@@ -11,6 +11,7 @@ import {
     Button,
 } from "@material-tailwind/react";
 import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
 
 const UpdateProfile = () => {
     const navigate = useNavigate()
@@ -27,6 +28,7 @@ const UpdateProfile = () => {
             .then(() => {
                 console.log('update successfully')
                 setReload(true)
+                toast.success("Profile Info updated successfully")
             })
             .catch(error => {
                 console.error(error)

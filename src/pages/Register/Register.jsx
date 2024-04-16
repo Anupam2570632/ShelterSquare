@@ -9,15 +9,19 @@ import {
 } from "@material-tailwind/react";
 import { useContext, useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { FaFacebook, FaGithub } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 import { toast } from "react-toastify";
+import { signOut } from "firebase/auth";
+import auth from "../../firebase/firebase.config";
 
 
 const Register = () => {
     const [show, setShow] = useState(false)
+    const location = useLocation()
+    const navigate = useNavigate()
 
     const { createAccount, FacebookSignIn, GoogleSignIn, GithubSignIn, updateUserInformation, setReload } = useContext(AuthContext)
     console.log(setReload)
@@ -39,13 +43,16 @@ const Register = () => {
         createAccount(email, password)
             .then(result => {
                 console.log(result.user)
+                navigate(location?.state ? location.state : '/')
                 toast.success('Account created successfully')
                 updateUserInformation(name, photoURL)
                 setReload(true)
+                signOut(auth)
+                navigate('/login')
             })
             .catch(error => {
                 console.error(error.message)
-                if(error.message == 'Firebase: Error (auth/email-already-in-use).') {
+                if (error.message == 'Firebase: Error (auth/email-already-in-use).') {
                     toast.error('email already in use')
                 }
             })
@@ -56,6 +63,7 @@ const Register = () => {
     const handleGoogleSignIn = () => {
         GoogleSignIn()
             .then(result => {
+                navigate('/')
                 console.log(result.user)
                 toast.success('Log in successfully')
             })
@@ -66,6 +74,7 @@ const Register = () => {
     const handleFacebookSIgnIn = () => {
         FacebookSignIn()
             .then(result => {
+                navigate('/')
                 console.log(result.user)
                 toast.success('Log in successfully')
             })
@@ -76,6 +85,7 @@ const Register = () => {
     const handleGithubSignIn = () => {
         GithubSignIn()
             .then(result => {
+                navigate('/')
                 console.log(result.user)
                 toast.success('Log in successfully')
             })
