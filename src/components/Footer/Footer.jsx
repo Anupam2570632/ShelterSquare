@@ -25,9 +25,9 @@ const Footer = () => {
                     <div>
                         <h1 className="text-xl mb-4 font-semibold">Company</h1>
                         <ul className="flex gap-2 flex-col">
-                            <Link className="text-[#CCCCCC]" to={''}>Term of Services</Link>
-                            <Link className="text-[#CCCCCC]" to={''}>Privacy policy</Link>
-                            <Link className="text-[#CCCCCC]" to={''}>Return and refund policy</Link>
+                            <li className="text-[#CCCCCC] hover:cursor-pointer">Term of Services</li>
+                            <li className="text-[#CCCCCC] hover:cursor-pointer">Privacy policy</li>
+                            <li className="text-[#CCCCCC] hover:cursor-pointer">Return and refund policy</li>
                         </ul>
                     </div>
                 </div>

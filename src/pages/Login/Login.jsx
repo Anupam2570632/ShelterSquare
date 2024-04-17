@@ -73,7 +73,7 @@ const Login = () => {
     }
 
     return (
-        <div className="h-[640px] bg-base-200 w-screen flex items-center justify-center">
+        <div className="h-[660px] bg-base-200 w-screen flex items-center justify-center">
             <Helmet>
                 <title>ShelterSquare | Login</title>
             </Helmet>

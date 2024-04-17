@@ -3,7 +3,7 @@ import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaTwitterSquare } 
 
 const ContactUs = () => {
     return (
-        <div className="w-11/12 md:w-4/5 rounded-2xl mx-auto px-4 py-10 md:p-20 flex flex-col space-y-8 bg-[#f3f4f6] my-10 items-center justify-center">
+        <div className=" rounded-2xl mx-auto px-4 py-10 md:p-20 flex flex-col space-y-8 bg-[#f3f4f6] items-center justify-center">
             <Helmet>
                 <title>ShelterSquare | Contact Us</title>
             </Helmet>
