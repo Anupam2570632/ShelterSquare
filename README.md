@@ -2,7 +2,7 @@
 
 ## Live Link
 
-[[google.con](google.com)]
+[[https://my-real-estate-web.netlify.app/](https://my-real-estate-web.netlify.app/)]
 
 ### Features
 

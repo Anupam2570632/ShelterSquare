@@ -18,7 +18,7 @@ const EstateDetails = () => {
             </Helmet>
             {
                 <>
-                    <img data-aos='zoom-in' className="rounded-[10px] pb-6" src={property.image} alt="" />
+                    <img className="rounded-[10px] pb-6" src={property.image} alt="" />
                     <h2 data-aos='fade-left' data-aos-duration='500' className="font-black text-2xl text-[#131313]">{property.estate_title}</h2>
                     <p data-aos='fade-left' data-aos-duration='500' data-aos-delay='500' className="font-bold text-purple-400 text-xl">{property.segment_name}</p>
                     <hr />

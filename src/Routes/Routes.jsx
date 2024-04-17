@@ -34,7 +34,7 @@ const route = createBrowserRouter([
             },
             {
                 path: '/contact-us',
-                element: <PrivateRoute><ContactUs /></PrivateRoute>
+                element: <ContactUs />
             },
             {
                 path: '/update-profile',
