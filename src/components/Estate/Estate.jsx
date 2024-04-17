@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 
 const Estate = () => {
     const { estate } = useContext(AuthContext)
-    console.log(estate)
+
     return (
         <div id="estate" className="pt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {
-                estate.map(aState => <div className="flex flex-col" key={aState.id}>
+                estate.map(aState => <div data-aos='zoom-in' data-aos-duration='1000' className="flex flex-col" key={aState.id}>
                     <div className="relative border border-transparent rounded-t-xl">
                         <div className="absolute rounded-t-xl inset-0 bg-black bg-opacity-30">
 
@@ -19,8 +19,8 @@ const Estate = () => {
                     </div>
                     <div className="p-6 space-y-4 h-full border flex flex-col border-t-0 rounded-b-xl border-gray-300">
                         <div className="flex items-center justify-between">
-                            <h2 className="text-xl font-bold text-[#131313]">{aState.estate_title}</h2>
-                            <h2 className="text-black rounded-xl px-1 border-2 border-purple-400"><span className="text-[18px] font-semibold">For : </span> <span className="opacity-65">{aState.status}</span></h2>
+                            <h2 className="text-xl text-wrap font-bold text-[#131313]">{aState.estate_title}</h2>
+                            <h2 className="text-black min-w-[80px] rounded-xl px-1 border-2 border-purple-400"><span className="text-[18px] font-semibold">For : </span> <span className="opacity-65">{aState.status}</span></h2>
                         </div>
                         <h3 className="text-[20px] font-semibold text-cyan-500">{aState.segment_name}</h3>
                         

@@ -8,12 +8,13 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import ContactUs from "../pages/ContactUs/ContactUs";
 import EstateDetails from "../pages/EstateDeatails/EstateDetails";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import AboutUs from "../pages/AboutUs/AboutUs";
 
 const route = createBrowserRouter([
     {
         path: '/',
         element: <Root />,
-        errorElement: <ErrorPage/>,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: '/',
@@ -26,6 +27,10 @@ const route = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register />
+            },
+            {
+                path: '/about-us',
+                element: <PrivateRoute><AboutUs /></PrivateRoute>
             },
             {
                 path: '/contact-us',

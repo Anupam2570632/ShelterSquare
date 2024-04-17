@@ -34,14 +34,14 @@ const Footer = () => {
                 <div className="flex flex-col gap-3">
                     <label className="text-xl font-semibold" htmlFor="mail">Subscribe to our email newsletter</label>
                     <div className="flex">
-                        <input className="h-full rounded-s-md text-xl px-4 text-[#CCCC] " autoComplete="off" type="email" id="mail" placeholder="Enter your email" />
+                        <input className="h-full rounded-s-md text-[18px] px-4 text-[#CCCC] " autoComplete="off" type="email" id="mail" placeholder="Enter your email" />
                         <button className="btn rounded-s-none font-bold btn-secondary">Subscribe</button>
                     </div>
                 </div>
             </div>
             <div className="text-center">
-                <h2 className="text-xl font-bold mb-4">Follow Us</h2>
-                <div className="flex gap-6 text-[#CCCC] justify-center">
+                <h2 data-aos='fade-left' data-aos-duration='1000' className="text-xl font-bold mb-4">Follow Us</h2>
+                <div data-aos='fade-left' data-aos-duration='1000' data-aos-delay='300' className="flex gap-6 text-[#CCCC] justify-center">
                     <FaFacebook className="text-3xl hover:cursor-pointer"></FaFacebook>
                     <FaLinkedin className="text-3xl hover:cursor-pointer"></FaLinkedin>
                     <FaInstagram className="text-3xl hover:cursor-pointer"></FaInstagram>

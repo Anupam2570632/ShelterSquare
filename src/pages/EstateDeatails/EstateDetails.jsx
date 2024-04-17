@@ -18,23 +18,24 @@ const EstateDetails = () => {
             </Helmet>
             {
                 <>
-                    <img className="rounded-[10px]" src={property.image} alt="" />
-                    <h2 className="font-black text-2xl text-[#131313]">{property.estate_title}</h2>
-                    <p className="font-bold text-purple-400 text-xl">{property.segment_name}</p>
+                    <img data-aos='zoom-in' className="rounded-[10px] pb-6" src={property.image} alt="" />
+                    <h2 data-aos='fade-left' data-aos-duration='500' className="font-black text-2xl text-[#131313]">{property.estate_title}</h2>
+                    <p data-aos='fade-left' data-aos-duration='500' data-aos-delay='500' className="font-bold text-purple-400 text-xl">{property.segment_name}</p>
                     <hr />
-                    <p className="text-[#333333]">
+                    <p data-aos='fade-up' data-aos-delay='1000' className="text-[#333333]">
                         {property.description}
                     </p>
                     <hr />
                     <div className="space-y-4">
                         <div className="flex items-center justify-between">
-                            <h2 className="text-xl font-bold">Price : <span className="text-[16px] font-semibold text-gray-600">{property.price}</span></h2> <h2 className="text-xl font-bold">For : <span className="text-[16px] font-semibold text-gray-600">{property.status}</span></h2>
+                            <h2 className=" font-bold">Price : <span className="text-[16px] font-medium text-gray-600">{property.price}</span></h2> <h2 className="font-bold underline underline-offset-4">For : <span className="text-[16px] font-medium text-gray-600">{property.status}</span></h2>
+
 
                         </div>
-                        <h2 className="text-xl font-bold">Area : <span className="text-[16px] font-semibold text-gray-600">{property.area}</span></h2>
+                        <h2 className=" font-bold">Area : <span className="text-[16px] font-medium text-gray-600">{property.area}</span></h2>
                         <h2 className="flex gap-2 items-center text-black opacity-65"><CiLocationOn className="text-xl" /> {property.location}</h2>
 
-                        <p className="text-xl font-bold">Facilities : </p>
+                        <p className=" font-bold">Facilities : </p>
                         <ul className="list-none flex gap-4">
                             {
                                 property.facilities.map((prop, idx) => <li className="px-3 bg-purple-200 py-1" key={idx}>{prop}</li>)

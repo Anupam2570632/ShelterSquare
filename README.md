@@ -1,8 +1,21 @@
 # ShelterSquare
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Link
 
-Currently, two official plugins are available:
+[[google.con](google.com)]
 
-- he
-- she
+### Features
+
+- Comprehensive Property Listings
+- Interactive Property Details
+- User-Friendly Authentication
+- Responsive Design
+- Enhanced User Experience
+- Update user Information
+- Protected Routes and Dynamic Title
+
+### npm packages used for challenge task
+
+- Swiper slider
+- AOS package
+- Animate.css

@@ -1,6 +1,5 @@
 import slider1 from '../../assets/banner5.avif'
 import slider2 from '../../assets/slider2.avif'
-import slider3 from '../../assets/banner4.jpeg'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 

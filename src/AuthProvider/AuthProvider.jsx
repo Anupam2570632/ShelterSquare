@@ -5,11 +5,9 @@ import auth from "../firebase/firebase.config";
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-    const [reload, setReload] = useState(false)
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
 
-    console.log(user)
 
     const googleProvider = new GoogleAuthProvider()
     const GoogleSignIn = () => {
@@ -48,7 +46,7 @@ const AuthProvider = ({ children }) => {
         return () => {
             unSubscribe()
         }
-    }, [reload])
+    }, [])
 
 
     const [estate, setEstate] = useState([])
@@ -60,7 +58,6 @@ const AuthProvider = ({ children }) => {
 
 
     const updateUserInformation = (name, photoURL) => {
-        setReload(true)
 
         return updateProfile(auth.currentUser, {
             displayName: name, photoURL: photoURL
@@ -72,7 +69,7 @@ const AuthProvider = ({ children }) => {
         return signOut(auth)
     }
 
-    const AuthInfo = { GoogleSignIn, FacebookSignIn,GithubSignIn, reload, setReload, user, estate, loading, createAccount, logIn, logOut, updateUserInformation }
+    const AuthInfo = { GoogleSignIn, FacebookSignIn, GithubSignIn, setUser, user, estate, loading, createAccount, logIn, logOut, updateUserInformation }
 
 
     return (
