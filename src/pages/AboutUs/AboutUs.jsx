@@ -20,7 +20,7 @@ const AboutUs = () => {
                     <img data-aos='fade-right' data-aos-duration='1500' src="http://androthemes.com/themes/react/acres/assets/img/listings-list/3.jpg" className="max-w-lg w-full rounded-lg object-cover object-center shadow-2xl" />
                     <div className="ml-8">
                         <p data-aos='fade-left' className="text-blue-700 mb-4 text-xl font-semibold">About Us</p>
-                        <h1 data-aos='fade-left' data-aos-delay='500' className="text-5xl font-bold">We provide state of the art real estate service</h1>
+                        <h1 data-aos='fade-left' data-aos-delay='500' className="text-3xl md:text-5xl font-bold">We provide state of the art real estate service</h1>
                         <p data-aos='fade-left' data-aos-delay='700' className="py-6 text-[#333333]">Explore our meticulously curated selection of premier real estate properties. From urban lofts to countryside estates, we offer top-tier listings tailored to your needs.</p>
                         <div data-aos='fade-left' data-aos-delay='800'>
                             <Link to={'/'}>
@@ -58,7 +58,7 @@ const AboutUs = () => {
                     <h1 data-aos='fade-left' data-aos-duration='600' className="text-blue-700 font-bold">
                         Testimonials
                     </h1>
-                    <p data-aos='fade left' data-aos-duration='600' data-aos-delay='600' className="text-4xl font-black">
+                    <p data-aos='fade left' data-aos-duration='600' data-aos-delay='600' className="text-2xl md:text-4xl font-black">
                         What Are People Saying
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -135,7 +135,7 @@ const AboutUs = () => {
             <div className="bg-[#f7f9fc] border border-gray-400">
                 <div className=" py-10 max-w-[85%] mx-auto flex flex-col lg:flex-row gap-6 items-center justify-between">
                     <div className="max-w-[450px] space-y-4">
-                        <h2 className="text-3xl font-bold text-black">Download Our App</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-black">Download Our App</h2>
                         <p className="text-[#333333]">Get our app for easy browsing, scheduling viewings, and staying updated on real estate trends. Find your dream property with convenience in the palm of your hand.</p>
                     </div>
                     <div className="flex gap-6">

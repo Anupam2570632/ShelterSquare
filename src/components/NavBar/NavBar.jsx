@@ -34,23 +34,29 @@ const NavBar = () => {
                         {links}
                         {
                             user &&
-                            <li className="pt-2">
+                            <div className="pt-2">
                                 <div className="">
                                     <hr />
                                     <div className="flex items-center justify-center gap-2 pr-4">
-                                        <img className="w-10 rounded-full" src={user.photoURL} alt="" />
+                                        <div data-tip={user.displayName} className="hover:tooltip hover:tooltip-bottom z-10">
+                                            <div role="button" className=" btn btn-ghost btn-circle avatar">
+                                                <div className="w-10 rounded-full flex items-center justify-center">
+                                                    <img alt="user" src={user.photoURL} />
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div>
                                             <h2 className="font-bold text-[#131313]">{user.displayName}</h2>
                                             <p>{user.email}</p>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
+                            </div>
                         }
                     </ul>
                 </div>
                 <Link to={'/'}>
-                    <h2 className="font-bold text-[#131313] text-3xl p-0">Shelter<span className="text-cyan-500">Square</span></h2>
+                    <h2 className="font-bold text-[#131313] text-2xl md:text-3xl p-0">Shelter<span className="text-cyan-500">Square</span></h2>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">

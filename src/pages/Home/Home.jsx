@@ -12,7 +12,7 @@ const Home = () => {
 
             <Banner />
             <div className="my-10 md:py-20 space-y-4">
-                <h2 data-aos='fade-left' className="text-4xl text-center font-black text-[#131313]">
+                <h2 data-aos='fade-left' className="text-2xl md:text-4xl text-center font-black text-[#131313]">
                     Explore Your Dream Home
                 </h2>
                 <p data-aos='fade-left' data-aos-delay='200' className="font-medium text-center max-w-[800px] mx-auto text-black opacity-30">

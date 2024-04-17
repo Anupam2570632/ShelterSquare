@@ -31,7 +31,7 @@ const Estate = () => {
                         </div>
                         <div className="flex flex-col gap-2">
                             <span className="text-[18px] font-semibold">Facilities : </span>
-                            <div className="flex flex-wrap">
+                            <div className="flex flex-wrap gap-1">
                                 {
                                     aState.facilities.map((facility, idx) => <div className="" key={idx}>
                                         <h1 className="border bg-purple-300 border-black font-medium px-3 py-2">{facility}</h1>

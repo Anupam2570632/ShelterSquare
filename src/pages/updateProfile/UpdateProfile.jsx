@@ -37,7 +37,7 @@ const UpdateProfile = () => {
                 <title>ShelterSquare | Update Profile</title>
             </Helmet>
             <div className="text-start py-10 space-y-4">
-                <h2 className="animate__animated animate__fadeInDown text-3xl font-bold">
+                <h2 className="text-2xl animate__animated animate__fadeInDown md:text-3xl font-bold">
                     Hello! <span className="text-blue-500"> {user.displayName}</span>
                 </h2>
                 <p data-aos='fade-left' data-aos-delay='600' className="max-w-[340px] text-[#333333] leading-6">
